@@ -1,7 +1,11 @@
 // Copyright 2026 Qore Technologies, s.r.o.
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 
 const action = 'list_customer_lists';
 

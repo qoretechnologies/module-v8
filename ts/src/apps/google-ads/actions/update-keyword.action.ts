@@ -2,7 +2,12 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { enums, MutateOperation } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage, toMicros } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+  toMicros,
+} from '../helpers/constants';
 import { getGoogleAdsAdGroupAllowedValues } from '../helpers/get-ad-group-allowed-values';
 import { getGoogleAdsKeywordAllowedValues } from '../helpers/get-keyword-allowed-values';
 

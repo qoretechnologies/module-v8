@@ -1,7 +1,12 @@
 // Copyright 2026 Qore Technologies, s.r.o.
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, fromMicros, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  fromMicros,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 
 const action = 'list_campaigns';
 
@@ -56,9 +61,8 @@ const listCampaigns = QoreAppCreator.createLocalizedAction<typeof options>({
 
       const whereClause = whereClauses.length > 0 ? `WHERE ${whereClauses.join(' AND ')}` : '';
 
-      const dateClause = date_range && date_range !== 'ALL_TIME'
-        ? `AND segments.date DURING ${date_range}`
-        : '';
+      const dateClause =
+        date_range && date_range !== 'ALL_TIME' ? `AND segments.date DURING ${date_range}` : '';
 
       const query = `
         SELECT

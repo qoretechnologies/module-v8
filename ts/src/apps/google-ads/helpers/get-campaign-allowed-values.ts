@@ -1,5 +1,9 @@
 // Copyright 2026 Qore Technologies, s.r.o.
-import { IQoreAllowedValue, TCustomConnOptions, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { getGoogleAdsCustomerFromContext } from './constants';
 
 export const getGoogleAdsCampaignAllowedValues: TQoreGetAllowedValuesFunction<

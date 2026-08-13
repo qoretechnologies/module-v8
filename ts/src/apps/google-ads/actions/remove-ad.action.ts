@@ -2,7 +2,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { MutateOperation, resources } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 import { getGoogleAdsAdGroupAllowedValues } from '../helpers/get-ad-group-allowed-values';
 import { getGoogleAdsAdAllowedValues } from '../helpers/get-ad-allowed-values';
 
@@ -31,10 +35,10 @@ const removeAd = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { customer, customer_id } = getGoogleAdsCustomerFromContext(
-      context as any,
-      ['ad_group_id', 'ad_id']
-    );
+    const { customer, customer_id } = getGoogleAdsCustomerFromContext(context as any, [
+      'ad_group_id',
+      'ad_id',
+    ]);
 
     const { ad_group_id, ad_id } = obj || {};
 

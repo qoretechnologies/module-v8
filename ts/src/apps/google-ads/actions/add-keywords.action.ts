@@ -2,7 +2,12 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { enums, MutateOperation } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage, toMicros } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+  toMicros,
+} from '../helpers/constants';
 import { getGoogleAdsAdGroupAllowedValues } from '../helpers/get-ad-group-allowed-values';
 
 const action = 'add_keywords';
@@ -68,40 +73,41 @@ const addKeywords = QoreAppCreator.createLocalizedAction<typeof options>({
     try {
       const mutations: MutateOperation<Record<string, unknown>>[] = keywords.map(
         (kw: { text: string; match_type: string; cpc_bid?: number }) => {
-        const matchType =
-          kw.match_type === 'BROAD'
-            ? enums.KeywordMatchType.BROAD
-            : kw.match_type === 'PHRASE'
-              ? enums.KeywordMatchType.PHRASE
-              : enums.KeywordMatchType.EXACT;
+          const matchType =
+            kw.match_type === 'BROAD'
+              ? enums.KeywordMatchType.BROAD
+              : kw.match_type === 'PHRASE'
+                ? enums.KeywordMatchType.PHRASE
+                : enums.KeywordMatchType.EXACT;
 
-        const resource: Record<string, unknown> = {
-          ad_group: `customers/${customerId}/adGroups/${ad_group_id}`,
-          keyword: {
-            text: kw.text,
-            match_type: matchType,
-          },
-          status: enums.AdGroupCriterionStatus.ENABLED,
-        };
+          const resource: Record<string, unknown> = {
+            ad_group: `customers/${customerId}/adGroups/${ad_group_id}`,
+            keyword: {
+              text: kw.text,
+              match_type: matchType,
+            },
+            status: enums.AdGroupCriterionStatus.ENABLED,
+          };
 
-        if (kw.cpc_bid !== undefined && kw.cpc_bid !== null) {
-          resource.cpc_bid_micros = toMicros(kw.cpc_bid);
-        }
+          if (kw.cpc_bid !== undefined && kw.cpc_bid !== null) {
+            resource.cpc_bid_micros = toMicros(kw.cpc_bid);
+          }
 
-        return {
-          entity: 'ad_group_criterion',
-          operation: 'create',
-          resource,
-        } as MutateOperation<Record<string, unknown>>;
+          return {
+            entity: 'ad_group_criterion',
+            operation: 'create',
+            resource,
+          } as MutateOperation<Record<string, unknown>>;
         }
       );
 
       const response = await customer.mutateResources(mutations);
 
       return {
-        results: response.mutate_operation_responses?.map((r) => ({
-          resource_name: r.ad_group_criterion_result?.resource_name ?? '',
-        })) ?? [],
+        results:
+          response.mutate_operation_responses?.map((r) => ({
+            resource_name: r.ad_group_criterion_result?.resource_name ?? '',
+          })) ?? [],
         keywords_added: keywords.length,
       };
     } catch (error: unknown) {

@@ -2,7 +2,7 @@
 import { createHash } from 'crypto';
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
+import { GOOGLE_ADS_API_VERSION, GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
 import { CUSTOMER_ID_OPTION, getGoogleAdsErrorMessage } from '../helpers/constants';
 import { getGoogleAdsCustomerListAllowedValues } from '../helpers/get-customer-list-allowed-values';
 
@@ -59,17 +59,18 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { token, developer_token, customer_id, login_customer_id } = getQoreContextRequiredValues<{
-      token: string;
-      developer_token: string;
-      customer_id: string;
-      login_customer_id?: string;
-    }>({
-      context,
-      connectionFields: ['token', 'developer_token'],
-      optionFields: ['customer_id', 'user_list_id', 'contacts'],
-      ErrorClass: GoogleAdsError,
-    });
+    const { token, developer_token, customer_id, login_customer_id } =
+      getQoreContextRequiredValues<{
+        token: string;
+        developer_token: string;
+        customer_id: string;
+        login_customer_id?: string;
+      }>({
+        context,
+        connectionFields: ['token', 'developer_token'],
+        optionFields: ['customer_id', 'user_list_id', 'contacts'],
+        ErrorClass: GoogleAdsError,
+      });
 
     const { user_list_id, contacts } = obj || {};
 
@@ -85,7 +86,7 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
 
     try {
       const headers: Record<string, string> = {
-        'Authorization': `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
         'developer-token': developer_token,
         'Content-Type': 'application/json',
       };
@@ -96,7 +97,7 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
 
       // Step 1: Create an offline user data job
       const createJobResponse = await fetch(
-        `https://googleads.googleapis.com/v23/customers/${customerId}/offlineUserDataJobs:create`,
+        `https://googleads.googleapis.com/${GOOGLE_ADS_API_VERSION}/customers/${customerId}/offlineUserDataJobs:create`,
         {
           method: 'POST',
           headers,
@@ -125,7 +126,8 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
 
       // Step 2: Build user identifiers and add operations
       const validContacts = contacts.filter(
-        (contact: { email?: string; phone_number?: string }) => contact.email || contact.phone_number
+        (contact: { email?: string; phone_number?: string }) =>
+          contact.email || contact.phone_number
       );
 
       if (validContacts.length === 0) {
@@ -156,7 +158,7 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
       });
 
       const addOpsResponse = await fetch(
-        `https://googleads.googleapis.com/v23/${jobResourceName}:addOperations`,
+        `https://googleads.googleapis.com/${GOOGLE_ADS_API_VERSION}/${jobResourceName}:addOperations`,
         {
           method: 'POST',
           headers,
@@ -174,7 +176,7 @@ const addContactsToCustomerList = QoreAppCreator.createLocalizedAction<typeof op
 
       // Step 3: Run the job
       const runResponse = await fetch(
-        `https://googleads.googleapis.com/v23/${jobResourceName}:run`,
+        `https://googleads.googleapis.com/${GOOGLE_ADS_API_VERSION}/${jobResourceName}:run`,
         {
           method: 'POST',
           headers,

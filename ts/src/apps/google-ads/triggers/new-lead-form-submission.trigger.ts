@@ -2,7 +2,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { pollCreatedItemsForTrigger } from '../../../global/helpers/event-triggers';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 import { getGoogleAdsCampaignAllowedValues } from '../helpers/get-campaign-allowed-values';
 
 const options = {

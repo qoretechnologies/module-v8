@@ -2,7 +2,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { enums, MutateOperation, resources } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 import { getGoogleAdsAdGroupAllowedValues } from '../helpers/get-ad-group-allowed-values';
 
 const action = 'create_responsive_search_ad';
@@ -57,10 +61,12 @@ const createResponsiveSearchAd = QoreAppCreator.createLocalizedAction<typeof opt
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { customer, customer_id } = getGoogleAdsCustomerFromContext(
-      context as any,
-      ['ad_group_id', 'headlines', 'descriptions', 'final_urls']
-    );
+    const { customer, customer_id } = getGoogleAdsCustomerFromContext(context as any, [
+      'ad_group_id',
+      'headlines',
+      'descriptions',
+      'final_urls',
+    ]);
 
     const {
       ad_group_id,

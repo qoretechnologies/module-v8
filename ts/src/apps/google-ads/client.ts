@@ -12,7 +12,14 @@ interface GoogleAdsClientConfig {
 }
 
 export const createGoogleAdsCustomer = (config: GoogleAdsClientConfig) => {
-  const { developer_token, customer_id, login_customer_id, client_id, client_secret, refresh_token } = config;
+  const {
+    developer_token,
+    customer_id,
+    login_customer_id,
+    client_id,
+    client_secret,
+    refresh_token,
+  } = config;
 
   if (!developer_token) {
     throw new GoogleAdsError('Developer token is required');

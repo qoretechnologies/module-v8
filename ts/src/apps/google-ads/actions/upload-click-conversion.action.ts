@@ -2,7 +2,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { services } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 import { getGoogleAdsConversionActionAllowedValues } from '../helpers/get-conversion-action-allowed-values';
 
 const action = 'upload_click_conversion';
@@ -60,7 +64,9 @@ const uploadClickConversion = QoreAppCreator.createLocalizedAction<typeof option
     } = obj || {};
 
     if (!gclid || !conversion_action_id || !conversion_date_time) {
-      throw new GoogleAdsError('gclid, conversion_action_id, and conversion_date_time are required');
+      throw new GoogleAdsError(
+        'gclid, conversion_action_id, and conversion_date_time are required'
+      );
     }
 
     const customerId = String(customer.credentials.customer_id).replace(/-/g, '');

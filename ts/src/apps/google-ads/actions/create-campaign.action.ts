@@ -2,7 +2,12 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { enums, MutateOperation, resources } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage, toMicros } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+  toMicros,
+} from '../helpers/constants';
 
 const action = 'create_campaign';
 
@@ -78,10 +83,12 @@ const createCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { customer } = getGoogleAdsCustomerFromContext(
-      context as any,
-      ['name', 'channel_type', 'daily_budget', 'bidding_strategy']
-    );
+    const { customer } = getGoogleAdsCustomerFromContext(context as any, [
+      'name',
+      'channel_type',
+      'daily_budget',
+      'bidding_strategy',
+    ]);
 
     const {
       name,
@@ -93,8 +100,16 @@ const createCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
       target_search_network = true,
     } = obj || {};
 
-    if (!name || !channel_type || daily_budget === undefined || daily_budget === null || !bidding_strategy) {
-      throw new GoogleAdsError('Name, channel type, daily budget, and bidding strategy are required');
+    if (
+      !name ||
+      !channel_type ||
+      daily_budget === undefined ||
+      daily_budget === null ||
+      !bidding_strategy
+    ) {
+      throw new GoogleAdsError(
+        'Name, channel type, daily budget, and bidding strategy are required'
+      );
     }
 
     const customerId = String(customer.credentials.customer_id).replace(/-/g, '');
@@ -154,9 +169,10 @@ const createCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
         resource: campaignResource,
       };
 
-      const response = await customer.mutateResources([budgetOperation, campaignOperation] as MutateOperation<
-        resources.ICampaignBudget | resources.ICampaign
-      >[]);
+      const response = await customer.mutateResources([
+        budgetOperation,
+        campaignOperation,
+      ] as MutateOperation<resources.ICampaignBudget | resources.ICampaign>[]);
 
       const campaignResourceName = response.mutate_operation_responses?.find(
         (r) => r.campaign_result?.resource_name

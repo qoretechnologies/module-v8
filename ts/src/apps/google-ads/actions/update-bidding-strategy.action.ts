@@ -2,7 +2,12 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { MutateOperation } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage, toMicros } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+  toMicros,
+} from '../helpers/constants';
 import { getGoogleAdsBiddingStrategyAllowedValues } from '../helpers/get-bidding-strategy-allowed-values';
 
 const action = 'update_bidding_strategy';
@@ -51,7 +56,9 @@ const updateBiddingStrategy = QoreAppCreator.createLocalizedAction<typeof option
       (target_cpa === undefined || target_cpa === null) &&
       (target_roas === undefined || target_roas === null)
     ) {
-      throw new GoogleAdsError('At least one field to update (name, target_cpa, or target_roas) is required');
+      throw new GoogleAdsError(
+        'At least one field to update (name, target_cpa, or target_roas) is required'
+      );
     }
 
     const customerId = String(customer_id).replace(/-/g, '');

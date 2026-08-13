@@ -4,6 +4,7 @@ import * as helpscoutConstants from '../apps/helpscout/constants';
 import azureDevOpsApp from '../apps/azure-devops';
 import { AZURE_DEVOPS_API_VERSION } from '../apps/azure-devops/constants';
 import esignatureApp from '../apps/esignature';
+import { GOOGLE_ADS_API_VERSION } from '../apps/google-ads/constants';
 import { ESIGNATURE_CONN_OPTIONS } from '../apps/esignature/conn-options';
 import facebookPagesApp from '../apps/facebook-pages';
 import { FACEBOOK_PAGES_API_VERSION } from '../apps/facebook-pages/constants';
@@ -97,6 +98,17 @@ describe('Azure DevOps API revisions', () => {
     );
 
     expect(offenders).toEqual([]);
+  });
+});
+
+describe('Google Ads API version', () => {
+  it('addresses the same API version from REST as the SDK speaks', () => {
+    // the app uses both: the SDK for most work, raw REST for listAccessibleCustomers and the
+    // offline user-data jobs. google-ads-api's major tracks the API version, so a bump has to move
+    // both together or the two halves address different versions — the Facebook Pages failure
+    const sdkMajor = require('google-ads-api/package.json').version.split('.')[0];
+
+    expect(GOOGLE_ADS_API_VERSION).toBe(`v${sdkMajor}`);
   });
 });
 

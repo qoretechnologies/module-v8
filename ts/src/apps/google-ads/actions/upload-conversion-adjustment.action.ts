@@ -2,7 +2,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { enums, services } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 import { getGoogleAdsConversionActionAllowedValues } from '../helpers/get-conversion-action-allowed-values';
 
 const action = 'upload_conversion_adjustment';
@@ -82,7 +86,10 @@ const uploadConversionAdjustment = QoreAppCreator.createLocalizedAction<typeof o
       throw new GoogleAdsError('Either order_id or gclid is required to identify the conversion');
     }
 
-    if (adjustment_type === 'RESTATEMENT' && (adjusted_value === undefined || adjusted_value === null)) {
+    if (
+      adjustment_type === 'RESTATEMENT' &&
+      (adjusted_value === undefined || adjusted_value === null)
+    ) {
       throw new GoogleAdsError('adjusted_value is required for RESTATEMENT adjustments');
     }
 
@@ -102,7 +109,9 @@ const uploadConversionAdjustment = QoreAppCreator.createLocalizedAction<typeof o
               },
             }
           : {}),
-        ...(adjustment_type === 'RESTATEMENT' && adjusted_value !== undefined && adjusted_value !== null
+        ...(adjustment_type === 'RESTATEMENT' &&
+        adjusted_value !== undefined &&
+        adjusted_value !== null
           ? {
               restatement_value: {
                 adjusted_value,

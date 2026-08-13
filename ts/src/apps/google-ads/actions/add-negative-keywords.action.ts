@@ -2,7 +2,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { enums, MutateOperation } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 import { getGoogleAdsCampaignAllowedValues } from '../helpers/get-campaign-allowed-values';
 
 const action = 'add_negative_keywords';
@@ -64,34 +68,35 @@ const addNegativeKeywords = QoreAppCreator.createLocalizedAction<typeof options>
     try {
       const mutations: MutateOperation<Record<string, unknown>>[] = keywords.map(
         (kw: { text: string; match_type: string }) => {
-        const matchType =
-          kw.match_type === 'BROAD'
-            ? enums.KeywordMatchType.BROAD
-            : kw.match_type === 'PHRASE'
-              ? enums.KeywordMatchType.PHRASE
-              : enums.KeywordMatchType.EXACT;
+          const matchType =
+            kw.match_type === 'BROAD'
+              ? enums.KeywordMatchType.BROAD
+              : kw.match_type === 'PHRASE'
+                ? enums.KeywordMatchType.PHRASE
+                : enums.KeywordMatchType.EXACT;
 
-        return {
-          entity: 'campaign_criterion',
-          operation: 'create',
-          resource: {
-            campaign: `customers/${customerId}/campaigns/${campaign_id}`,
-            keyword: {
-              text: kw.text,
-              match_type: matchType,
+          return {
+            entity: 'campaign_criterion',
+            operation: 'create',
+            resource: {
+              campaign: `customers/${customerId}/campaigns/${campaign_id}`,
+              keyword: {
+                text: kw.text,
+                match_type: matchType,
+              },
+              negative: true,
             },
-            negative: true,
-          },
-        } as MutateOperation<Record<string, unknown>>;
+          } as MutateOperation<Record<string, unknown>>;
         }
       );
 
       const response = await customer.mutateResources(mutations);
 
       return {
-        results: response.mutate_operation_responses?.map((r) => ({
-          resource_name: r.campaign_criterion_result?.resource_name ?? '',
-        })) ?? [],
+        results:
+          response.mutate_operation_responses?.map((r) => ({
+            resource_name: r.campaign_criterion_result?.resource_name ?? '',
+          })) ?? [],
         keywords_added: keywords.length,
       };
     } catch (error: unknown) {

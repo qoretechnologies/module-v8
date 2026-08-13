@@ -2,7 +2,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { enums, MutateOperation, resources } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 import { getGoogleAdsCampaignAllowedValues } from '../helpers/get-campaign-allowed-values';
 
 const action = 'update_campaign';
@@ -79,7 +83,8 @@ const updateCampaign = QoreAppCreator.createLocalizedAction<typeof options>({
 
       const response = await customer.mutateResources([updateOperation]);
 
-      const updatedResourceName = response.mutate_operation_responses?.[0]?.campaign_result?.resource_name;
+      const updatedResourceName =
+        response.mutate_operation_responses?.[0]?.campaign_result?.resource_name;
 
       return {
         resource_name: updatedResourceName ?? `customers/${customerId}/campaigns/${campaign_id}`,

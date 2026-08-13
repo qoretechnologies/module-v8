@@ -2,7 +2,11 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { enums, MutateOperation, resources } from 'google-ads-api';
 import { GOOGLE_ADS_APP_NAME, GoogleAdsError } from '../constants';
-import { CUSTOMER_ID_OPTION, getGoogleAdsCustomerFromContext, getGoogleAdsErrorMessage } from '../helpers/constants';
+import {
+  CUSTOMER_ID_OPTION,
+  getGoogleAdsCustomerFromContext,
+  getGoogleAdsErrorMessage,
+} from '../helpers/constants';
 import { getGoogleAdsAdGroupAllowedValues } from '../helpers/get-ad-group-allowed-values';
 import { getGoogleAdsAdAllowedValues } from '../helpers/get-ad-allowed-values';
 
@@ -46,10 +50,11 @@ const updateAdStatus = QoreAppCreator.createLocalizedAction<typeof options>({
   action_code: EQoreAppActionCode.ACTION,
   options,
   api_function: async (obj, _opts, context) => {
-    const { customer, customer_id } = getGoogleAdsCustomerFromContext(
-      context as any,
-      ['ad_group_id', 'ad_id', 'status']
-    );
+    const { customer, customer_id } = getGoogleAdsCustomerFromContext(context as any, [
+      'ad_group_id',
+      'ad_id',
+      'status',
+    ]);
 
     const { ad_group_id, ad_id, status } = obj || {};
 

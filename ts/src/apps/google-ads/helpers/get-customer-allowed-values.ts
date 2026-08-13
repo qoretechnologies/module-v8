@@ -1,5 +1,10 @@
 // Copyright 2026 Qore Technologies, s.r.o.
-import { IQoreAllowedValue, TCustomConnOptions, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
+import { GOOGLE_ADS_API_VERSION } from '../constants';
 
 export const getGoogleAdsCustomerAllowedValues: TQoreGetAllowedValuesFunction<
   TCustomConnOptions,
@@ -14,7 +19,7 @@ export const getGoogleAdsCustomerAllowedValues: TQoreGetAllowedValuesFunction<
     }
 
     const headers: Record<string, string> = {
-      'Authorization': `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
       'developer-token': developerToken,
     };
 
@@ -24,7 +29,7 @@ export const getGoogleAdsCustomerAllowedValues: TQoreGetAllowedValuesFunction<
     }
 
     const response = await fetch(
-      'https://googleads.googleapis.com/v23/customers:listAccessibleCustomers',
+      `https://googleads.googleapis.com/${GOOGLE_ADS_API_VERSION}/customers:listAccessibleCustomers`,
       { method: 'GET', headers }
     );
 

@@ -1,5 +1,9 @@
 // Copyright 2026 Qore Technologies, s.r.o.
-import { IQoreAllowedValue, TCustomConnOptions, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
+import {
+  IQoreAllowedValue,
+  TCustomConnOptions,
+  TQoreGetAllowedValuesFunction,
+} from '@qoretechnologies/ts-toolkit';
 import { getGoogleAdsCustomerFromContext } from './constants';
 
 export const getGoogleAdsKeywordAllowedValues: TQoreGetAllowedValuesFunction<
@@ -33,7 +37,9 @@ export const getGoogleAdsKeywordAllowedValues: TQoreGetAllowedValuesFunction<
     return results.map(
       (row): IQoreAllowedValue<string> => ({
         value: String(row.ad_group_criterion?.criterion_id),
-        display_name: row.ad_group_criterion?.keyword?.text || `Keyword ${row.ad_group_criterion?.criterion_id}`,
+        display_name:
+          row.ad_group_criterion?.keyword?.text ||
+          `Keyword ${row.ad_group_criterion?.criterion_id}`,
         desc: `Match: ${row.ad_group_criterion?.keyword?.match_type ?? 'N/A'}\nAd Group: ${row.ad_group?.name ?? 'N/A'}\nStatus: ${row.ad_group_criterion?.status}`,
       })
     );
