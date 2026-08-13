@@ -61,7 +61,6 @@ const getPage = QoreAppCreator.createLocalizedAction<typeof options>({
     fields: {
       id: { type: 'string' },
       title: { type: 'string' },
-      archived: { type: 'bool' },
       in_trash: { type: 'bool' },
       is_locked: { type: 'bool' },
       created_time: { type: 'string' },

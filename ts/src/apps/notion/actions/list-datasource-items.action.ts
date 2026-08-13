@@ -238,10 +238,6 @@ const elementType = {
         },
       },
     },
-    archived: {
-      type: 'bool',
-      example_value: false,
-    },
     in_trash: {
       type: 'bool',
       example_value: false,

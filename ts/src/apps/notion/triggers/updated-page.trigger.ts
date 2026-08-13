@@ -66,7 +66,6 @@ const UpdatedPage = QoreAppCreator.createLocalizedTrigger({
       fields: {
         id: { type: 'string' },
         title: { type: 'string' },
-        archived: { type: 'bool' },
         in_trash: { type: 'bool' },
         is_locked: { type: 'bool' },
         created_time: { type: 'string' },

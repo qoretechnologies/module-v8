@@ -137,7 +137,6 @@ const responseType = {
         },
       },
     },
-    archived: { type: 'bool' },
     in_trash: { type: 'bool' },
     is_locked: { type: 'bool' },
     properties: { type: 'hash' },

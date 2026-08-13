@@ -140,10 +140,6 @@ const listComments = QoreAppCreator.createLocalizedAction<typeof options>({
                 type: 'bool',
                 example_value: false,
               },
-              archived: {
-                type: 'bool',
-                example_value: false,
-              },
               in_trash: {
                 type: 'bool',
                 example_value: false,
@@ -246,7 +242,6 @@ const listComments = QoreAppCreator.createLocalizedAction<typeof options>({
             created_by: { object: 'user', id: '105d872b-594c-811f-93c6-0027f7d2d6d3' },
             last_edited_by: { object: 'user', id: '105d872b-594c-811f-93c6-0027f7d2d6d3' },
             has_children: false,
-            archived: false,
             in_trash: false,
             type: 'paragraph',
             paragraph: {

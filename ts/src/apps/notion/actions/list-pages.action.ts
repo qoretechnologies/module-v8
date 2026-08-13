@@ -177,7 +177,6 @@ const listPages = QoreAppCreator.createLocalizedAction<typeof options>({
       },
       url: { type: 'string' },
       public_url: { type: 'string' },
-      archived: { type: 'bool' },
       in_trash: { type: 'bool' },
       is_locked: { type: 'bool' },
     },

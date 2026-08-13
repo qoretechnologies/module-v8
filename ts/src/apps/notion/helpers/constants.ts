@@ -9,8 +9,8 @@ import { IQoreAllowedValue, TQoreAppActionOption } from '@qoretechnologies/ts-to
  * `after` parameter of Append Block Children with a `position` object, and renames the
  * `transcription` block type to `meeting_notes`. Only the first of those affects this application.
  *
- * `archived` is still returned alongside `in_trash` and still accepted on requests, marked
- * deprecated, so the response shapes this application publishes keep declaring both.
+ * `archived` was removed from request parameters and response bodies in this version, so all
+ * published response shapes and page-update calls must use `in_trash` exclusively.
  *
  * Requires `@notionhq/client` 5.12.0 or later.
  */

@@ -119,6 +119,36 @@ describe('Google Ads API version', () => {
   });
 });
 
+describe('Notion API version', () => {
+  const APP_DIR = join(__dirname, '..', 'apps', 'notion');
+
+  const sourceFiles = (dir: string): string[] =>
+    readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+      const path = join(dir, entry.name);
+
+      if (entry.isDirectory()) {
+        return sourceFiles(path);
+      }
+
+      return entry.isFile() && entry.name.endsWith('.ts') ? [path] : [];
+    });
+
+  it('does not use fields removed from the 2026-03-11 REST contract', () => {
+    const removedFields = [
+      /\barchived\s*:/,
+      /\bafter\s*:/,
+      /\btranscription\s*:/,
+      /\btype\s*:\s*['"]transcription['"]/,
+    ];
+    const offenders = sourceFiles(APP_DIR).flatMap((path) => {
+      const source = readFileSync(path, 'utf8');
+      return removedFields.some((pattern) => pattern.test(source)) ? [path] : [];
+    });
+
+    expect(offenders).toEqual([]);
+  });
+});
+
 describe('DocuSign environment selection', () => {
   const app = esignatureApp('en' as any);
 
