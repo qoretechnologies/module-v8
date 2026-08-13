@@ -37,6 +37,7 @@ const DynamicsNewOrderTrigger = QoreAppCreator.createLocalizedTrigger({
         trigger_name: 'dynamics_new_order',
         uniqueField: 'salesorderid',
         getItems,
+        orderKey: (item) => item.createdon,
         update,
         should_stop,
       });

@@ -38,6 +38,7 @@ const DynamicsNewInvoiceTrigger = QoreAppCreator.createLocalizedTrigger({
         trigger_name: 'dynamics_new_invoice',
         uniqueField: 'invoiceid',
         getItems,
+        orderKey: (item) => item.createdon,
         update,
         should_stop,
       });
@@ -164,7 +165,7 @@ const getLatestDynamicsInvoices = async (
         path: '/api/data/v9.1/invoices',
         headers,
         params: {
-          $orderby: `${sortField} asc`,
+          $orderby: `${sortField} desc`,
           $top: DEFAULT_TRIGGER_POLL_ITEM_LIMIT.toString(),
         },
       },

@@ -41,6 +41,7 @@ const DynamicsNewCustomEntityTrigger = QoreAppCreator.createLocalizedTrigger({
       trigger_name: 'dynamics_new_custom_entity',
       uniqueField: `${entityName}id`,
       getItems,
+      orderKey: (item) => item.createdon,
       update,
       should_stop,
     });
@@ -102,7 +103,7 @@ const getLatestDynamicsCustomEntities = async (
         path: `/api/data/v9.1/${entityName}`,
         headers,
         params: {
-          $orderby: 'createdon asc',
+          $orderby: 'createdon desc',
           $top: DEFAULT_TRIGGER_POLL_ITEM_LIMIT.toString(),
         },
       },

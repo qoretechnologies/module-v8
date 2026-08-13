@@ -37,6 +37,7 @@ const DynamicsNewLeadTrigger = QoreAppCreator.createLocalizedTrigger({
         trigger_name: 'dynamics_new_lead',
         uniqueField: 'leadid',
         getItems,
+        orderKey: (item) => item.createdon,
         update,
         should_stop,
       });
@@ -170,7 +171,7 @@ const getLatestDynamicsLeads = async (
         path: '/api/data/v9.1/leads',
         headers,
         params: {
-          $orderby: `${sortField} asc`,
+          $orderby: `${sortField} desc`,
           $top: DEFAULT_TRIGGER_POLL_ITEM_LIMIT.toString(),
         },
       },
