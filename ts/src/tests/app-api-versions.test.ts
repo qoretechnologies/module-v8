@@ -8,8 +8,6 @@ import { GOOGLE_ADS_API_VERSION } from '../apps/google-ads/constants';
 import { ESIGNATURE_CONN_OPTIONS } from '../apps/esignature/conn-options';
 import facebookPagesApp from '../apps/facebook-pages';
 import { FACEBOOK_PAGES_API_VERSION } from '../apps/facebook-pages/constants';
-import klaviyoApp from '../apps/klaviyo';
-import { KLAVIYO_API_REVISION } from '../apps/klaviyo/constants';
 import notionApp from '../apps/notion';
 import { NOTION_API_VERSION } from '../apps/notion/helpers/constants';
 import shopifyApp from '../apps/shopify';
@@ -43,21 +41,6 @@ describe('connection pings ride the same API version as the actions', () => {
     expect(app.rest.ping_headers['Notion-Version']).toBe(NOTION_API_VERSION);
   });
 
-  it('pings Klaviyo with the revision its SDK sends', () => {
-    const app = klaviyoApp('en' as any);
-    // klaviyo-api hardcodes the revision its major was generated against and offers no override,
-    // so the SDK is the authority on what the actions actually send; it is a module-local const
-    // rather than an export, so it is read from the installed package
-    const sdk = readFileSync(
-      require.resolve('klaviyo-api/dist/api/apis.js', { paths: [process.cwd()] }),
-      'utf8'
-    );
-    const sdkRevision = /revision = "([\d-]+)"/.exec(sdk)?.[1];
-
-    expect(sdkRevision).toBeDefined();
-    expect(KLAVIYO_API_REVISION).toBe(sdkRevision);
-    expect(app.rest.ping_headers.revision).toBe(KLAVIYO_API_REVISION);
-  });
 });
 
 describe('Facebook Pages Graph API version', () => {

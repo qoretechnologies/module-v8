@@ -83,7 +83,6 @@ const NEW_APP_DIRS: readonly string[] = [
   'helpscout',
   'hubspot',
   'jira',
-  'klaviyo',
   'magento',
   'mailchimp',
   'mautic',
