@@ -3,13 +3,13 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { GetCampaignResponseCollectionCompoundDocumentDataInner } from 'klaviyo-api';
+import { CampaignResponseObjectResource } from 'klaviyo-api';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { KlaviyoError } from '../constants';
 import { getKlaviyoApis } from './constants';
 
 const mapKlaviyoItemToAllowedValue = (
-  item: GetCampaignResponseCollectionCompoundDocumentDataInner
+  item: CampaignResponseObjectResource
 ): IQoreAllowedValue<string> => {
   const name = item.attributes.name || '';
 
@@ -50,7 +50,7 @@ export const getKlaviyoEmailCampaignIdAllowedValues: TQoreGetAllowedValuesFuncti
 
   const { campaignsApi } = getKlaviyoApis(token);
 
-  const items: GetCampaignResponseCollectionCompoundDocumentDataInner[] = [];
+  const items: CampaignResponseObjectResource[] = [];
   let pageCursor = undefined;
 
   try {
@@ -83,7 +83,7 @@ export const getKlaviyoSmsCampaignIdAllowedValues: TQoreGetAllowedValuesFunction
 
   const { campaignsApi } = getKlaviyoApis(token);
 
-  const items: GetCampaignResponseCollectionCompoundDocumentDataInner[] = [];
+  const items: CampaignResponseObjectResource[] = [];
   let pageCursor = undefined;
 
   try {

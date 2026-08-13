@@ -3,13 +3,13 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { GetProfileResponseCollectionCompoundDocumentDataInner } from 'klaviyo-api';
+import { ProfileResponseObjectResourceExtended } from 'klaviyo-api';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { KlaviyoError } from '../constants';
 import { getKlaviyoApis } from './constants';
 
 const mapKlaviyoItemToAllowedValue = (
-  item: GetProfileResponseCollectionCompoundDocumentDataInner
+  item: ProfileResponseObjectResourceExtended
 ): IQoreAllowedValue<string> => {
   const firstName = item.attributes.firstName || '';
   const lastName = item.attributes.lastName || '';
@@ -33,7 +33,7 @@ export const getKlaviyoProfileIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const { profilesApi } = getKlaviyoApis(token);
 
-  const items: GetProfileResponseCollectionCompoundDocumentDataInner[] = [];
+  const items: ProfileResponseObjectResourceExtended[] = [];
   let pageCursor = undefined;
 
   try {

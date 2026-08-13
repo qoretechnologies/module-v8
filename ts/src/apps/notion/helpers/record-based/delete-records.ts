@@ -49,7 +49,8 @@ export const deleteNotionRecords: TQoreDeleteRecordsFunction = async (context, w
         try {
           await notion.pages.update({
             page_id: (page as PageObjectResponse).id,
-            archived: true,
+            // `archived` is the pre-2026-03-11 spelling and is deprecated
+            in_trash: true,
           });
           return true;
         } catch (error) {

@@ -3,13 +3,13 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { GetListListResponseCollectionCompoundDocumentDataInner } from 'klaviyo-api';
+import { ListListResponseObjectResource } from 'klaviyo-api';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { KlaviyoError } from '../constants';
 import { getKlaviyoApis } from './constants';
 
 const mapKlaviyoItemToAllowedValue = (
-  item: GetListListResponseCollectionCompoundDocumentDataInner
+  item: ListListResponseObjectResource
 ): IQoreAllowedValue<string> => {
   return {
     value: item.id!,
@@ -29,7 +29,7 @@ export const getKlaviyoListIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const { listsApi } = getKlaviyoApis(token);
 
-  const items: GetListListResponseCollectionCompoundDocumentDataInner[] = [];
+  const items: ListListResponseObjectResource[] = [];
   let pageCursor = undefined;
 
   try {

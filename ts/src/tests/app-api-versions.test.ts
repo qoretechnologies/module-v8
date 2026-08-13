@@ -45,11 +45,18 @@ describe('connection pings ride the same API version as the actions', () => {
 
   it('pings Klaviyo with the revision its SDK sends', () => {
     const app = klaviyoApp('en' as any);
+    // klaviyo-api hardcodes the revision its major was generated against and offers no override,
+    // so the SDK is the authority on what the actions actually send; it is a module-local const
+    // rather than an export, so it is read from the installed package
+    const sdk = readFileSync(
+      require.resolve('klaviyo-api/dist/api/apis.js', { paths: [process.cwd()] }),
+      'utf8'
+    );
+    const sdkRevision = /revision = "([\d-]+)"/.exec(sdk)?.[1];
 
-    // klaviyo-api@19 sends 2025-07-15 and offers no override, so this is the only value that
-    // describes what the actions actually do
+    expect(sdkRevision).toBeDefined();
+    expect(KLAVIYO_API_REVISION).toBe(sdkRevision);
     expect(app.rest.ping_headers.revision).toBe(KLAVIYO_API_REVISION);
-    expect(KLAVIYO_API_REVISION).toBe('2025-07-15');
   });
 });
 

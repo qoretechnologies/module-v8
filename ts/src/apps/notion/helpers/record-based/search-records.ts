@@ -69,9 +69,8 @@ export const searchNotionRecords: TQoreSearchRecordsFunction = async (ctx, where
         }
 
         try {
-          const effectiveBlockSize = maxLimit !== undefined
-            ? Math.min(blockSize, maxLimit - recordsReturned)
-            : blockSize;
+          const effectiveBlockSize =
+            maxLimit !== undefined ? Math.min(blockSize, maxLimit - recordsReturned) : blockSize;
 
           const pagedQueryParams = {
             ...queryParams,

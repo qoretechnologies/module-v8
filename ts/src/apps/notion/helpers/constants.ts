@@ -1,7 +1,20 @@
 import { Client, DataSourceObjectResponse, RichTextItemResponse } from '@notionhq/client';
 import { IQoreAllowedValue, TQoreAppActionOption } from '@qoretechnologies/ts-toolkit';
 
-export const NOTION_API_VERSION = '2025-09-03';
+/**
+ * The Notion API version this application speaks.
+ *
+ * Notion dates its versions and requires the `Notion-Version` header on every request. `2026-03-11`
+ * renames `archived` to `in_trash` on pages, databases, blocks and data sources, replaces the
+ * `after` parameter of Append Block Children with a `position` object, and renames the
+ * `transcription` block type to `meeting_notes`. Only the first of those affects this application.
+ *
+ * `archived` is still returned alongside `in_trash` and still accepted on requests, marked
+ * deprecated, so the response shapes this application publishes keep declaring both.
+ *
+ * Requires `@notionhq/client` 5.12.0 or later.
+ */
+export const NOTION_API_VERSION = '2026-03-11';
 
 export const createNotionClient = (token: string, version = NOTION_API_VERSION) => {
   const notion = new Client({

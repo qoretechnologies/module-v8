@@ -3,13 +3,13 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { GetEventResponseCollectionCompoundDocumentDataInner } from 'klaviyo-api';
+import { EventResponseObjectResource } from 'klaviyo-api';
 import { formatDateReadable, getQoreContextRequiredValues } from '../../../global/helpers';
 import { KlaviyoError } from '../constants';
 import { getKlaviyoApis } from './constants';
 
 const mapKlaviyoItemToAllowedValue = (
-  item: GetEventResponseCollectionCompoundDocumentDataInner
+  item: EventResponseObjectResource
 ): IQoreAllowedValue<string> => {
   return {
     value: item.id!,
@@ -31,7 +31,7 @@ export const getKlaviyoEventIdAllowedValues: TQoreGetAllowedValuesFunction<
 
   const { eventsApi } = getKlaviyoApis(token);
 
-  const items: GetEventResponseCollectionCompoundDocumentDataInner[] = [];
+  const items: EventResponseObjectResource[] = [];
   let pageCursor = undefined;
 
   try {
