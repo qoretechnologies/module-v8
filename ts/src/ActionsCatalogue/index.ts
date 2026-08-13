@@ -82,7 +82,6 @@ const NEW_APP_DIRS: readonly string[] = [
   'google-tasks',
   'helpscout',
   'hubspot',
-  'intercom',
   'jira',
   'klaviyo',
   'magento',
