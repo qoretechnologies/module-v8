@@ -1,4 +1,5 @@
-import { callMondayAPI } from '../constants';
+import { MONDAY_BOARD_PAGE_SIZE, MONDAY_ITEMS_PAGE_SIZE } from '../../constants';
+import { callMondayAPI, fetchAllMondayPages } from '../constants';
 import {
   buildMondayFilter,
   formatMondayQueryFieldValues,
@@ -10,12 +11,6 @@ type TMondayBoard = {
   name: string;
   access_level: string;
   type: string;
-};
-
-type TBoardsResponseType = {
-  data: {
-    boards: TMondayBoard[];
-  };
 };
 
 export type TMondayItem = {
@@ -53,9 +48,16 @@ export type TMondayItemsPageResponse = {
 };
 export const getMondayBoards = async (token: string) => {
   try {
-    const query = `
+    // `boards` returns only the first 25 rows when `limit` is omitted; this list backs board
+    // name-to-ID resolution for the whole table interface, so a truncated page makes every board
+    // past the first 25 unaddressable by name.
+    const boards = await fetchAllMondayPages<TMondayBoard>({
+      token,
+      collection: 'boards',
+      pageSize: MONDAY_BOARD_PAGE_SIZE,
+      buildQuery: (limit, page) => `
             query {
-              boards {
+              boards(limit: ${limit}, page: ${page}) {
                 id
                 name
                 access_level
@@ -63,14 +65,8 @@ export const getMondayBoards = async (token: string) => {
                 type
               }
             }
-          `;
-
-    const response = await callMondayAPI<TBoardsResponseType>({
-      query,
-      token,
+          `,
     });
-
-    const boards = response.data.boards;
 
     return boards.filter((board) => board.type === 'board');
   } catch (error) {
@@ -116,7 +112,7 @@ export const fetchMondayRecordIds = async (options: {
 
   const buildQuery = (cursorValue: string | null): string => {
     const itemsPageParams = [
-      'limit: 500',
+      `limit: ${MONDAY_ITEMS_PAGE_SIZE}`,
       cursorValue ? `cursor: "${cursorValue}"` : null,
       !cursorValue && queryParams
         ? `query_params: ${serializeMondayQueryParams(queryParams)}`
@@ -164,13 +160,20 @@ export const fetchMondayRecordIds = async (options: {
       ? response.data?.boards?.[0]?.groups?.[0]?.items_page
       : response.data?.boards?.[0]?.items_page;
 
-    if (!itemsPage) break;
+    // this list decides which records an update or a delete touches, so an unresolved page is an
+    // error: treating it as the end of the collection would quietly narrow the operation instead
+    if (!itemsPage) {
+      throw new Error(
+        `Monday returned no items page for board ${boardId}` +
+          `${groupId ? ` group ${groupId}` : ''} while collecting record IDs`
+      );
+    }
 
     const items = itemsPage.items || [];
     recordIds.push(...items.map((item: any) => item.id));
 
     cursor = itemsPage.cursor;
-    hasMore = cursor !== null && items.length === 500;
+    hasMore = cursor !== null && items.length === MONDAY_ITEMS_PAGE_SIZE;
   }
 
   return recordIds;

@@ -3,6 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
+import { MONDAY_ALLOWED_VALUES_PAGE_SIZE } from '../constants';
 import { callMondayAPI } from './constants';
 
 type TMondayRecord = {
@@ -43,10 +44,12 @@ export const getMondayRecordIdAllowedValues: TQoreGetAllowedValuesFunction<
     throw new Error('token is required to get Monday record ID allowed values');
   }
 
+  // an omitted `limit` silently caps this at monday's default of 25; the picker offers a bounded
+  // most-recent window, so state the bound rather than inheriting it
   const query = `
   query GetSortedBoardItems($boardId: [ID!]!) {
     boards(ids: $boardId) {
-      items_page(query_params: {
+      items_page(limit: ${MONDAY_ALLOWED_VALUES_PAGE_SIZE}, query_params: {
         order_by: [
           { column_id: "__creation_log__", direction: desc },
           { column_id: "__last_updated__", direction: desc }

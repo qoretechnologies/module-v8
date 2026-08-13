@@ -3,7 +3,7 @@ import { Debugger } from '../../../utils/Debugger';
 import { callMondayAPI } from './client';
 import { getMondayBoardFields } from './get-board-fields';
 
-export { callMondayAPI, type TMondayApiDynamicOptions } from './client';
+export { callMondayAPI, fetchAllMondayPages, type TMondayApiDynamicOptions } from './client';
 
 type TBatchCreateItem = {
   board_id: string;

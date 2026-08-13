@@ -3,17 +3,12 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { callMondayAPI } from './constants';
+import { MONDAY_BOARD_PAGE_SIZE } from '../constants';
+import { fetchAllMondayPages } from './constants';
 
 type TMondayBoard = {
   id: string;
   name: string;
-};
-
-type TBoardsResponseType = {
-  data: {
-    boards: TMondayBoard[];
-  };
 };
 
 const mapMondayBoard = (board: TMondayBoard): IQoreAllowedValue<string> => ({
@@ -32,24 +27,20 @@ export const getMondayBoardIdAllowedValues: TQoreGetAllowedValuesFunction<
     throw new Error('token is required to get Monday board ID allowed values');
   }
 
-  const query = `
-    query {
-      boards {
-        id
-        name
-      }
-    }
-  `;
-
-  const response = await callMondayAPI<TBoardsResponseType>({
-    query,
+  // `boards` returns only the first 25 rows when `limit` is omitted, so the picker has to page.
+  const boards = await fetchAllMondayPages<TMondayBoard>({
     token,
+    collection: 'boards',
+    pageSize: MONDAY_BOARD_PAGE_SIZE,
+    buildQuery: (limit, page) => `
+      query {
+        boards(limit: ${limit}, page: ${page}) {
+          id
+          name
+        }
+      }
+    `,
   });
-
-  const boards = response.data.boards;
-  if (!boards) {
-    throw new Error('No boards returned from monday.com API');
-  }
 
   return boards.map(mapMondayBoard);
 };

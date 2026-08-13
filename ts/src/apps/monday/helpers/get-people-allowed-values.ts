@@ -3,7 +3,7 @@ import {
   TCustomConnOptions,
   TQoreGetAllowedValuesFunction,
 } from '@qoretechnologies/ts-toolkit';
-import { callMondayAPI } from './client';
+import { callMondayAPI, fetchAllMondayPages } from './client';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
 import { MondayError } from '../constants';
 
@@ -20,12 +20,6 @@ type TMondayUser = {
 type TMondayTeam = {
   id: number;
   name: string;
-};
-
-type TUsersResponseType = {
-  data: {
-    users: TMondayUser[];
-  };
 };
 
 type TTeamsResponseType = {
@@ -69,20 +63,6 @@ export const getMondayPeopleAllowedValues: TQoreGetAllowedValuesFunction<
     ErrorClass: MondayError,
   });
 
-  const usersQuery = `
-    query GetUsers {
-      users {
-        id
-        name
-        email
-        title
-        photo_thumb
-        is_guest
-        enabled
-      }
-    }
-  `;
-
   const teamsQuery = `
     query GetTeams {
       teams {
@@ -92,10 +72,25 @@ export const getMondayPeopleAllowedValues: TQoreGetAllowedValuesFunction<
     }
   `;
 
-  const [usersResponse, teamsResponse] = await Promise.all([
-    callMondayAPI<TUsersResponseType>({
-      query: usersQuery,
+  // `users` returns at most 200 rows when `limit` is omitted, and reports nothing when it
+  // truncates, so the picker has to page the account roster explicitly.
+  const [users, teamsResponse] = await Promise.all([
+    fetchAllMondayPages<TMondayUser>({
       token,
+      collection: 'users',
+      buildQuery: (limit, page) => `
+        query GetUsers {
+          users(limit: ${limit}, page: ${page}) {
+            id
+            name
+            email
+            title
+            photo_thumb
+            is_guest
+            enabled
+          }
+        }
+      `,
     }),
     callMondayAPI<TTeamsResponseType>({
       query: teamsQuery,
@@ -103,7 +98,6 @@ export const getMondayPeopleAllowedValues: TQoreGetAllowedValuesFunction<
     }),
   ]);
 
-  const users = usersResponse.data?.users || [];
   const teams = teamsResponse.data?.teams || [];
 
   const activeUsers = users.filter((user) => user.enabled !== false);
