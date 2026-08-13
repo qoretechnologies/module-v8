@@ -89,6 +89,8 @@ describe('Tests eSignature Actions', () => {
         {
           conn_opts: {
             token,
+            // these tests run against DocuSign's developer demo environment
+            environment: 'account-d',
             base_uri: baseUri,
             accounts: [],
             account_id: accountId,
@@ -107,6 +109,8 @@ describe('Tests eSignature Actions', () => {
           {
             conn_opts: {
               token,
+              // these tests run against DocuSign's developer demo environment
+              environment: 'account-d',
               base_uri: baseUri,
               accounts: [],
               account_id: accountId,
@@ -134,6 +138,8 @@ describe('Tests eSignature Actions', () => {
         {
           conn_opts: {
             token,
+            // these tests run against DocuSign's developer demo environment
+            environment: 'account-d',
             base_uri: baseUri,
             accounts: [],
             account_id: accountId,
@@ -152,6 +158,8 @@ describe('Tests eSignature Actions', () => {
           {
             conn_opts: {
               token,
+              // these tests run against DocuSign's developer demo environment
+              environment: 'account-d',
               base_uri: baseUri,
               accounts: [],
               account_id: accountId,

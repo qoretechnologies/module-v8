@@ -262,8 +262,10 @@ export default (locale: Locales) =>
       oauth2_grant_type: 'authorization_code',
       oauth2_client_id: 'a7aaad55-1fc1-4a14-90cd-d4a27cb84d32',
       oauth2_client_secret: getOauth2ClientSecret(ESIGNATURE_APP_NAME),
-      oauth2_auth_url: 'https://account-d.docusign.com/oauth/auth',
-      oauth2_token_url: 'https://account-d.docusign.com/oauth/token',
+      // the account server is chosen by the `environment` connection option; hardcoding the demo
+      // host left no production tenant able to authenticate at all
+      oauth2_auth_url: 'https://{{environment}}.docusign.com/oauth/auth',
+      oauth2_token_url: 'https://{{environment}}.docusign.com/oauth/token',
       oauth2_scopes: ['impersonation', 'signature'],
       ping_method: 'GET',
     },
@@ -278,6 +280,14 @@ export default (locale: Locales) =>
 
         if (!token) throw new Error('Token is missing for docusign set_options_post_auth');
 
+        // the account server that issued the token is the only one that can describe it, so this
+        // must follow the same environment the authorization went through
+        const environment = context?.conn_opts?.environment;
+
+        if (!environment) {
+          throw new Error('Environment is missing for docusign set_options_post_auth');
+        }
+
         const response: { data: IEsignatureUserInfo } | undefined = await QorusRequest.get<{
           data: IEsignatureUserInfo;
         }>(
@@ -288,7 +298,7 @@ export default (locale: Locales) =>
             },
           },
           {
-            url: 'https://account-d.docusign.com',
+            url: `https://${environment}.docusign.com`,
             endpointId: 'Docusign',
           }
         );
@@ -313,6 +323,9 @@ export default (locale: Locales) =>
         const account_id: string = account.account_id;
 
         return {
+          // carried through unchanged: the caller chose it, and the discovered account values
+          // below are only meaningful against the environment that issued the token
+          environment,
           base_uri,
           account_id,
           accounts: userInfo.accounts,
@@ -339,6 +352,6 @@ export default (locale: Locales) =>
           }
         },
       },
-      url_template_options: ['account_id', 'base_uri'],
+      url_template_options: ['account_id', 'base_uri', 'environment'],
     },
   }) satisfies TQoreAppWithActions;

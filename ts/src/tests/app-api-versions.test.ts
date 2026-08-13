@@ -3,6 +3,8 @@ import { join } from 'path';
 import * as helpscoutConstants from '../apps/helpscout/constants';
 import azureDevOpsApp from '../apps/azure-devops';
 import { AZURE_DEVOPS_API_VERSION } from '../apps/azure-devops/constants';
+import esignatureApp from '../apps/esignature';
+import { ESIGNATURE_CONN_OPTIONS } from '../apps/esignature/conn-options';
 import facebookPagesApp from '../apps/facebook-pages';
 import { FACEBOOK_PAGES_API_VERSION } from '../apps/facebook-pages/constants';
 import klaviyoApp from '../apps/klaviyo';
@@ -95,6 +97,27 @@ describe('Azure DevOps API revisions', () => {
     );
 
     expect(offenders).toEqual([]);
+  });
+});
+
+describe('DocuSign environment selection', () => {
+  const app = esignatureApp('en' as any);
+
+  it('authenticates against the environment the connection selects', () => {
+    // all three account-server sites hardcoded the developer demo host, so no production tenant
+    // could authenticate at all
+    expect(app.rest.oauth2_auth_url).toBe('https://{{environment}}.docusign.com/oauth/auth');
+    expect(app.rest.oauth2_token_url).toBe('https://{{environment}}.docusign.com/oauth/token');
+    expect(app.rest_modifiers.url_template_options).toContain('environment');
+  });
+
+  it('offers both account servers and defaults to the one it used before', () => {
+    const values = ESIGNATURE_CONN_OPTIONS.environment.allowed_values.map((v) => v.value);
+
+    expect(values).toEqual(['account-d', 'account']);
+    // defaulting to production would silently repoint existing connections at a server their
+    // integration key is not promoted for
+    expect(ESIGNATURE_CONN_OPTIONS.environment.default_value).toBe('account-d');
   });
 });
 

@@ -1,4 +1,8 @@
-import { TAllowedPaths, TQoreAppActionOverrideOption, TQoreFile } from '@qoretechnologies/ts-toolkit';
+import {
+  TAllowedPaths,
+  TQoreAppActionOverrideOption,
+  TQoreFile,
+} from '@qoretechnologies/ts-toolkit';
 import { OpenAPIV2 } from 'openapi-types';
 import { buildActionsFromSwaggerSchema } from '../../global/helpers';
 import eSignature from '../../schemas/esignature.swagger.json';
