@@ -5,7 +5,12 @@ import {
   TQoreOptions,
 } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
-import { AZURE_DEVOPS_APP_NAME, AzureDevOpsError } from '../constants';
+import {
+  AZURE_DEVOPS_API_VERSION,
+  AZURE_DEVOPS_APP_NAME,
+  AZURE_DEVOPS_SERVICE_HOOKS_TEST_API_VERSION,
+  AzureDevOpsError,
+} from '../constants';
 import { getAzureDevOpsProjectAllowedValues } from '../helpers/get-project-allowed-values';
 import { DeregisterAzureDevOpsWebhook } from './constants';
 import { getAzureDevOpsWorkItemFieldAllowedValues } from '../helpers/get-work-item-fields';
@@ -104,7 +109,7 @@ const NewWorkItem = QoreAppCreator.createLocalizedTrigger({
         {
           path: '/_apis/hooks/testnotifications',
           params: {
-            'api-version': '7.2-preview.1',
+            'api-version': AZURE_DEVOPS_SERVICE_HOOKS_TEST_API_VERSION,
           },
           headers: {
             Authorization: `Bearer ${token}`,
@@ -528,7 +533,7 @@ const createSubscription = async (options: {
     {
       path: '/_apis/hooks/subscriptions',
       params: {
-        'api-version': '7.1',
+        'api-version': AZURE_DEVOPS_API_VERSION,
       },
       headers: {
         Authorization: `Bearer ${token}`,

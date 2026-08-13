@@ -1,6 +1,6 @@
 import { QorusRequest, TWebhookDeregisterFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { AZURE_DEVOPS_APP_NAME, AzureDevOpsError } from '../constants';
+import { AZURE_DEVOPS_API_VERSION, AZURE_DEVOPS_APP_NAME, AzureDevOpsError } from '../constants';
 
 export const DeregisterAzureDevOpsWebhook: TWebhookDeregisterFunction = async (
   context,
@@ -24,7 +24,7 @@ export const DeregisterAzureDevOpsWebhook: TWebhookDeregisterFunction = async (
       {
         path: `/_apis/hooks/subscriptions/${subscriptionId}`,
         params: {
-          'api-version': '7.1',
+          'api-version': AZURE_DEVOPS_API_VERSION,
         },
         headers: {
           Authorization: `Bearer ${token}`,

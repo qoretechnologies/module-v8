@@ -1,4 +1,8 @@
+import { readFileSync, readdirSync } from 'fs';
+import { join } from 'path';
 import * as helpscoutConstants from '../apps/helpscout/constants';
+import azureDevOpsApp from '../apps/azure-devops';
+import { AZURE_DEVOPS_API_VERSION } from '../apps/azure-devops/constants';
 import facebookPagesApp from '../apps/facebook-pages';
 import { FACEBOOK_PAGES_API_VERSION } from '../apps/facebook-pages/constants';
 import klaviyoApp from '../apps/klaviyo';
@@ -54,6 +58,43 @@ describe('Facebook Pages Graph API version', () => {
 
     expect(FACEBOOK_PAGES_API_VERSION).toBe(`v${sdkMajor}.0`);
     expect(app.rest.url).toBe(`https://graph.facebook.com/${FACEBOOK_PAGES_API_VERSION}`);
+  });
+});
+
+describe('Azure DevOps API revisions', () => {
+  const APP_DIR = join(__dirname, '..', 'apps', 'azure-devops');
+
+  /** every `.ts` under the app, with the file that owns the revisions excluded */
+  const sourceFiles = (dir: string): string[] =>
+    readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+      const path = join(dir, entry.name);
+
+      if (entry.isDirectory()) {
+        return sourceFiles(path);
+      }
+
+      return entry.isFile() && entry.name.endsWith('.ts') && path !== join(APP_DIR, 'constants.ts')
+        ? [path]
+        : [];
+    });
+
+  it('pings on the released revision', () => {
+    const app = azureDevOpsApp('en' as any);
+
+    expect(app.rest.ping_path).toBe(
+      `/_apis/profile/profiles/me?api-version=${AZURE_DEVOPS_API_VERSION}`
+    );
+  });
+
+  it('carries no api-version literal outside the file that owns them', () => {
+    // the Graph and Service Hooks test-notification families are preview-only by Microsoft's
+    // choice and cannot be eliminated, so the containment is that a revision bump is one edit —
+    // this fails the moment a literal is reintroduced at a call site
+    const offenders = sourceFiles(APP_DIR).filter((path) =>
+      /api-version['"]?\s*[:=]\s*['"`]?\d+\.\d+/.test(readFileSync(path, 'utf8'))
+    );
+
+    expect(offenders).toEqual([]);
   });
 });
 

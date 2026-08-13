@@ -3,6 +3,7 @@ import { mapActionsToApp, mapTriggersToApp } from '../../global/helpers';
 import L from '../../i18n/i18n-node';
 import { Locales } from '../../i18n/i18n-types';
 import {
+  AZURE_DEVOPS_API_VERSION,
   AZURE_DEVOPS_APP_LOGO,
   AZURE_DEVOPS_APP_NAME,
   AZURE_DEVOPS_CONN_OPTIONS,
@@ -31,7 +32,7 @@ export default (locale: Locales) =>
       oauth2_auth_url: 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize',
       oauth2_token_url: 'https://login.microsoftonline.com/common/oauth2/v2.0/token',
       ping_method: 'GET',
-      ping_path: '/_apis/profile/profiles/me?api-version=7.1',
+      ping_path: `/_apis/profile/profiles/me?api-version=${AZURE_DEVOPS_API_VERSION}`,
     },
     rest_modifiers: {
       options: AZURE_DEVOPS_CONN_OPTIONS,

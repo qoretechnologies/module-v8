@@ -1,6 +1,10 @@
 import { EQoreAppActionCode, QoreAppCreator, TQoreOptions } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues, humanizeNameTitle } from '../../../global/helpers';
-import { AZURE_DEVOPS_APP_NAME, AzureDevOpsError } from '../constants';
+import {
+  AZURE_DEVOPS_APP_NAME,
+  AZURE_DEVOPS_GRAPH_API_VERSION,
+  AzureDevOpsError,
+} from '../constants';
 import { createAzureDevOpsClient } from '../helpers/constants';
 
 const action = 'list_users';
@@ -32,7 +36,7 @@ const ListUsers = QoreAppCreator.createLocalizedAction<typeof options>({
     const baseUrl = `https://vssps.dev.azure.com/${options.organization}/_apis/graph/users`;
 
     const params = new URLSearchParams({
-      'api-version': '7.2-preview.1',
+      'api-version': AZURE_DEVOPS_GRAPH_API_VERSION,
       subjectTypes: 'aad,msa',
       top: limit,
       ...(continuationToken && { continuationToken }),

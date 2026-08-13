@@ -1,6 +1,10 @@
 import { IQoreAllowedValue, TQoreGetAllowedValuesFunction } from '@qoretechnologies/ts-toolkit';
 import { getQoreContextRequiredValues } from '../../../global/helpers';
-import { AZURE_DEVOPS_CONN_OPTIONS, AzureDevOpsError } from '../constants';
+import {
+  AZURE_DEVOPS_CONN_OPTIONS,
+  AZURE_DEVOPS_GRAPH_API_VERSION,
+  AzureDevOpsError,
+} from '../constants';
 import { createAzureDevOpsClient } from './constants';
 type ActiveCampaignItem = {
   descriptor: string;
@@ -28,7 +32,7 @@ export const getAzureDevOpsUserAllowedValues: TQoreGetAllowedValuesFunction<
   const baseUrl = `https://vssps.dev.azure.com/${organization}/_apis/graph/users`;
 
   const params = new URLSearchParams({
-    'api-version': '7.2-preview.1',
+    'api-version': AZURE_DEVOPS_GRAPH_API_VERSION,
     subjectTypes: 'aad,msa',
     top: '200',
   });
